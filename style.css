@@ -94,7 +94,7 @@ a{
 }
 
 #callToAction{
-    display: block;
+    display: inline-block;
     padding:.7rem 1.6rem;
     color: #fff;
     font-weight: bold;
@@ -116,14 +116,14 @@ a{
 #introText{
     font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
     line-height: 1.2;
     letter-spacing: 3px;
 }
 
 .heroText{
     font-size: 1.2rem;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
     line-height: 1.7;
     max-width: 350px;
 }
@@ -147,7 +147,8 @@ a{
   border-radius: 20px;
   padding: 2rem;
   box-sizing: border-box;
-  height: 100%;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .chooseUs, .ftProducts, .menu{
