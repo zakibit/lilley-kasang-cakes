@@ -71,6 +71,7 @@ a{
     border-bottom: 2px solid #de2f2f;
 }
 
+
 .nav:active{
     color: #de2f2f;
     border-bottom: 2px solid #de2f2f;
@@ -151,48 +152,85 @@ a{
   justify-content: center;
 }
 
-.chooseUs, .ftProducts, .menu{
-    box-sizing: border-box;
-    min-width: 150px;
-    width: calc(100%/3);
-    height:150px;
-    margin: 10px;
-    box-shadow: 0 0 5px 6px #9d9797;
-    border-radius: 15px;
-    margin: 10px;
-    text-align: center;
-    background: linear-gradient(135deg, #FFF8E7, #D4AF37);
-    padding: 10px;
-}
-
 
 .whyChooseUs{
+    padding:2rem;
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    gap: 10px;
-    padding: 20px;
-
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.menu-list, .product-list{
+.chooseUsCard{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    flex:1 1 300px;
+    min-height:300px;
+    border-radius:15px;
+    background:#ffffff;
+    box-shadow:0 12px 20px rgba(0,0,0,.12);
+    text-align:center;
+    padding:2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chooseUsCard:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(207, 111, 14, 0.15);
+}
+
+.whyUs{
+    background-color: #fffaf0;
+    padding: 4rem 8%;
+    text-align: center;
+}
+
+.icon{
+    width: 200px;
+    height:auto;
+    object-fit:contain;
+    margin-bottom:1.1rem;
+}
+
+.chooseUs h3{
+    margin:1rem 0;
+    font-size:1.5rem;
+margin-bottom:.8rem;
+}
+
+.chooseUs p{
+    font-size:1rem;
+    line-height:1.7;
+    color:#666666;
+    max-width: 260px;
+}
+
+.menuList, .product-list{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 10px;
-    padding: 20px;
-    margin: auto;
-    list-style: none;
-
-}
-
-.ftProducts, .menu:hover{
-    width: calc(100%/3);
-    height: 150px;
-    margin: 10px;
-    box-shadow: 0 0 1px 2px #9d9797;
-    border-radius: 15px;
-    margin: 10px;
+    align-items: center;
     text-align: center;
+    padding: 1.5rem 10%;
+    list-style: none;
+    gap: 2rem;
+   
+
 }
+
+.menu{
+    display:flex;
+    flex:1 1 300px;
+    min-height:200px;
+    border-radius:15px;
+    background:#ffffff;
+    box-shadow:0 12px 20px rgba(0,0,0,.12);
+    text-align:center;
+    padding:2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 
