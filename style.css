@@ -245,6 +245,7 @@ margin-bottom:.8rem;
 .featureList{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     text-align: center;
     padding: 1.5rem 10%;
