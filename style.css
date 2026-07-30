@@ -380,22 +380,67 @@ margin-bottom:.8rem;
 
 footer{
     display: flex;
-    justify-content: space-between;
+    background-color:#2f1b12;
+    color:#ffffff;
+    padding:4rem;
+
 }
 
 .footerimg{
-    width: 50%;
+    width: 1;
 }
 
-.officeContacts{
-    background-color: #723903;
-    width: 50%;
+.footerContent{
+    width: 1;
+    padding:2rem 3rem;
+     display:flex;
+    flex-direction:column;
+
 }
 
-.address{
-    width:40%;
+
+.footerImage img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    border-radius:20px 0 0 20px;
 }
 
-.address h2{
-    font-size: 2em;
+.footerLogo img{
+    width:90px;
+    height:auto;
+    display:block;
+    margin-bottom:2.5rem;
+}
+
+.footerContent h3{
+    font-size:1.2rem;
+    font-weight:600;
+    margin-bottom:.8rem;
+    color:#ffffff;
+}
+
+.address,
+.contact,
+.socials{
+    margin-bottom:2rem;
+}
+
+.footerContent p{
+    color:#d9d9d9;
+    line-height:1.8;
+    font-size:1rem;
+}
+
+.socialIcons{
+    display:flex;
+    gap:1rem;
+    align-items:center;
+}
+.socialIcons img{
+    width:28px;
+    height:28px;
+    display:block;
+    transition:transform .3s ease;
 }
