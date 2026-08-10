@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LiLLey Kasang Cakes</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navBar">
+            <div class="heading">
+                <img class="logo" src="/logo and images/lilley-kasang logo transparent.png"
+                    alt="Lilley Kasang Cakes Logo" id="logo">
+
+                <h1>LILLEY KASANG CAKES</h1>
+            </div>
+                <ul class="navList">
+                    <li><a href="/index.html" class="nav">Home</a></li>
+                    <li><a href="/about.html" class="nav">About Us</a></li>
+                    <li><a href="/menu.html" class="nav">Menu</a></li>
+                    <li><a href="/notReady.html" class="nav">My Orders</a></li>
+                </ul>
+            <a href="https://wa.me/2347081178816?text=Hello!%20I%20would%20like%20to%20order%20a%20cake."
+                target="_blank" rel="noopener noreferrer" class="headerCta">Contact Us</a>
+            <button class="hamBurgerMenu" aria-label="Open Menu">
+                ☰
+            </button>
+        </nav>
+    </header>
+    <main>
+        <section class="menuHero">
+            <h2>Our Menu</h2>
+            <p>Freshly made cakes, pastries, meals and treats.</p>
+        </section>
+        <section class="menuSearch">
+            <input type="text" id="searchBox" placeholder="Search our menu...">
+        </section>
+        <section class="categories">
+            <button class="category activeCategory" data-category="all">All</button>
+            <button class="category" data-category="cakes">Cakes</button>
+            <button class="category" data-category="pastries">Pastries</button>
+            <button class="category" data-category="meals">Meals</button>
+            <button class="category" data-category="bread">Bread</button>
+            <button class="category" data-category="drinks">Drinks</button>
+        </section>
+        <section class="products">
+            <!-- cakes -->
+            <div class="productCard" data-category="cakes" data-id="chocolate-cake">
+                <img src="/logo and images/custom cake.png" alt="Chocolate Cake">
+                <div class="productInfo">
+                    <h3>Chocolate Cake</h3>
+                    <p>Rich chocolate cake with creamy frosting.</p>
+                    <span class="productPrice">₦15,000</span>
+                    <button class="addToCart">Add to Cart</button>
+                </div>
+            </div>
+                    <!-- Pastry -->
+            <div class="productCard" data-category="pastries" data-id="meat-pie">
+                <img src="/logo and images/meat-pie.jpg" alt="Meat Pie">
+                <div class="productInfo">
+                    <h3>Meat Pie</h3>
+                    <p>Flaky crust packed with seasoned minced meat and potatoes.</p>
+                    <span class="productPrice">₦1,200</span>
+                    <button class="addToCart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="productCard" data-category="pastries" data-id="samosa">
+                <img src="/logo and images/samosa.jpg" alt="samosa">
+                <div class="productInfo">
+                    <h3>samosa</h3>
+                    <p>Flaky crust packed with seasoned minced meat and potatoes.</p>
+                    <span class="productPrice">₦1,200</span>
+                    <button class="addToCart">Add to Cart</button>
+                </div>
+            </div>
+                    
+            <!-- food -->
+            <div class="productCard" data-category="meals" data-id="jollof-rice">
+                <img src="/logo and images/jollof-rice.jpg" alt="Jollof Rice & Chicken">
+                <div class="productInfo">
+                    <h3>Jollof Rice & Chicken</h3>
+                    <p>Smoky Nigerian Jollof rice served with fried chicken.</p>
+                    <span class="productPrice">₦3,500</span>
+                    <button class="addToCart">Add to Cart</button>
+                </div>
+            </div>
+                    
+            <!-- Bread-->
+            <div class="productCard" data-category="bread" data-id="fresh-loaf-bread">
+                <img src="/logo and images/sourdough-bread.jpg" alt="Fresh Loaf Bread">
+                <div class="productInfo">
+                    <h3>Fresh Loaf Bread</h3>
+                    <p>Soft, warm, oven-fresh loaves baked  daily.</p>
+                    <span class="productPrice">₦1,500</span>
+                    <button class="addToCart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="productCard" data-category="bread" data-id="fresh-slice-bread">
+                <img src="/logo and images/sourdough-bread.jpg" alt="Fresh Loaf Bread">
+                <div class="productInfo">
+                    <h3>Fresh slice Bread</h3>
+                    <p>Soft, warm, oven-fresh loaves baked daily.</p>
+                    <span class="productPrice">₦1,500</span>
+                    <button class="addToCart">Add to Cart</button>
+                </div>
+                    
+            <!-- food-->
+            <div class="productCard" data-category="meals" data-id="fried-rice">
+                <img src="/logo and images/jollof-rice.jpg" alt="fried Rice & Chicken">
+                <div class="productInfo">
+                    <h3>fried Rice & Chicken</h3>
+                    <p>Smoky Nigerian fried rice served with fried chicken.</p>
+                    <span class="productPrice">₦3,500</span>
+                    <button class="addToCart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footerImage">
+            <img src="/logo and images/footer img.png" alt="A cake on a turntable being decorated">
+        </div>
+        <div class="footerContent">
+            <div class="footerLogo">
+                <img src="/logo and images/lilley-kasang logo transparent.png" alt="LiLLey Kasang Cakes Logo">
+            </div>
+            <div class="address">
+                <h3>Address</h3>
+                <p>Opposite Happy Night Hotel,<br>Kabala West,<br>Kaduna State, Nigeria</p>
+            </div>
+            <div class="contact">
+                <h3>Contact</h3>
+                <p>+234 708 117 8816</p>
+                <p>lilleykasangcakes@gmail.com</p>
+            </div>
+            <div class="socials">
+                <h3>Follow Us</h3>
+                <div class="socialIcons">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://wa.me/2347081178816" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <a href="https://wa.me/2347081178816" target="_blank" rel="noopener noreferrer" class="menuBtn">Place Your
+                Orders</a>
+        </div>
+    </footer>
+    <div class="copyright">
+        <p>&copy; 2026 LiLLey Kasang Cakes. All Rights Reserved.</p>
+    </div>
+    <script src="./script.js"></script>
+    </body>
+
+    </html>

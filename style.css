@@ -555,33 +555,401 @@ footer{
 @media (max-width:768px){
     .hamBurgerMenu{display: block;
     }
-    .navList{
-        display:none;
-    }
+
     .headerCta{
         display:none;
     }
-    .navBar{position: relative;
-    }
-    .navList.menuOpen{
-    display:flex;
+
+   .navList{
+    display: flex;
     flex-direction: column;
     position: absolute;
-    left: 0;
     font-size: 1em;
     top: 100%;
+    right: 4%;
     width: 40%;
-    background:#f5f5f5;
-    padding:1rem 0;
-    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    background: #f5f5f5;
+    padding: 1rem 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-70px);
+    transition: opacity .7s ease,
+                transform .7s ease,
+                visibility .7s ease;
 }
+
+    .navBar{position: relative;
+    }
+
+    .navList.menuOpen{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .navList.menuOpen .nav{
     display:block;
     width:100%;
     padding:1rem 1.5rem;
     border-bottom:none;
+    transition: background-color .7s ease;
 }
+
 .navList.menuOpen .nav:hover{
     background:#969090;
 }
 }
+
+/* menu section */
+
+.menuHero{
+    text-align: center;
+    padding: 4rem 1rem 2rem;
+}
+
+.menuHero h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.menuHero p{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.menuSearch{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+#searchBox{
+    width: 100%;
+    max-width: 600px;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.categories{
+    display: flex;
+    justify-content: center;
+    gap: .7rem;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.category{
+    border: none;
+    background: #f5f5f5;
+    padding: .7rem 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.activeCategory{
+    background: #cd7216;
+    color: white;
+}
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.productCard{
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    transition: transform .5s ease,
+                box-shadow .5s ease;
+
+}
+
+.productCard:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,.12);
+}
+
+.productCard.hidden{
+    display: none;
+}
+
+.addToCart{
+    transition: transform .2s ease,
+                background-color .2s ease;
+}
+
+.addToCart:hover{
+    transform: scale(.98);
+    background-color: #de2f2f;
+}
+
+.productCard img{
+    width: 100%;
+    height: 220px;
+    max-height: 220px;
+    object-fit: cover;
+    display: block; transition: transform .5s ease;
+}
+
+.productCard:hover img{
+    transform: scale(1.03);
+}
+
+.productInfo{
+    padding: 1.2rem;
+}
+
+.productInfo h3{
+    margin: 0 0 .5rem;
+    font-size: 1.2rem;
+}
+
+.productInfo p{
+    margin: 0;
+    line-height: 1.5;
+    font-size: .95rem;
+}
+
+.productPrice{
+    display: block;
+    font-weight: bold;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.addToCart{
+    width: 100%;
+    padding: .8rem;
+    border: none;
+    border-radius: 6px;
+    background: #cd7216;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 900px){
+    .products{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px){
+    .products{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* About section */
+ /* --- RESET & BASE STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fffaf0;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            background-color: #ffffff;
+            padding: 4rem 8% 3rem;
+            text-align: center;
+            border-bottom: 2px solid #f3d4a0;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #cd7216;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: #555555;
+            max-width: 650px;
+            margin: 0 auto;
+            font-weight: 500;
+        }
+
+        /* --- STATS COUNTER BAR --- */
+        .stats-bar {
+            background-color: #cd7216;
+            color: #ffffff;
+            padding: 2.5rem 8%;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.2rem;
+        }
+
+        .stat-item p {
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+        }
+
+        /* --- STORY SECTION --- */
+        .story-section {
+            padding: 4rem 8%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .story-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .story-content {
+            flex: 1 1 450px;
+        }
+
+        .story-content h2 {
+            font-size: 2rem;
+            color: #cd7216;
+            margin-bottom: 1rem;
+        }
+
+        .story-content p {
+            margin-bottom: 1.2rem;
+            color: #444444;
+            font-size: 1.05rem;
+        }
+
+        .founder-badge {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 5px solid #cd7216;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            margin-top: 1.5rem;
+        }
+
+        .founder-badge h4 {
+            color: #cd7216;
+            font-size: 1.1rem;
+        }
+
+        .founder-badge span {
+            font-size: 0.85rem;
+            color: #777;
+            text-transform: uppercase;
+        }
+
+        /* --- VALUES & SERVICES --- */
+        .features-section {
+            background-color: #ffffff;
+            padding: 4rem 8%;
+            border-top: 2px solid #f3d4a0;
+            border-bottom: 2px solid #f3d4a0;
+        }
+
+        .features-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #333333;
+            margin-bottom: 2.5rem;
+        }
+
+        .features-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            flex: 1 1 300px;
+            background-color: #fffaf0;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #f3d4a0;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: #cd7216;
+            margin-bottom: 0.75rem;
+        }
+
+        /* --- LOCATION CARD --- */
+        .location-section {
+            padding: 4rem 8%;
+            text-align: center;
+        }
+
+        .location-box {
+            background-color: #ffffff;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 2px solid #f3d4a0;
+            box-shadow: 0 10px 25px rgba(205, 114, 22, 0.1);
+        }
+
+        .location-box h2 {
+            color: #cd7216;
+            margin-bottom: 0.75rem;
+        }
+
+        .address-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+            margin: 1rem 0;
+        }
+
+        .btn-home {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.85rem 2rem;
+            background-color: #cd7216;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-home:hover {
+            background-color: #723903;
+        }
