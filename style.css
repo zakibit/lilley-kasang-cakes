@@ -524,6 +524,9 @@ footer{
 }
 
 @media (max-width:900px){
+    #cartIcon{
+        display:none;
+    }
 
     .footer{
         flex-direction:column;
