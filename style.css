@@ -684,6 +684,7 @@ footer{
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    overflow-y:scroll;
 }
 
 .productCard{
@@ -717,8 +718,7 @@ footer{
 
 .productCard img{
     width: 100%;
-    height: 250px;
-    max-height: 220px;
+    height: 220px;
     object-fit: cover;
     display: block; transition: transform .5s ease;
 }
@@ -729,6 +729,7 @@ footer{
 
 .productInfo{
     padding: 1.2rem;
+    height:230px
 }
 
 .productInfo h3{

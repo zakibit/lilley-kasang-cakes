@@ -5,7 +5,6 @@ const categoryButtons = document.querySelectorAll(".category");
 const productCards = document.querySelectorAll(".productCard");
 const searchBox = document.querySelector("#searchBox");
 const cartButtons = document.querySelectorAll(".addToCart");
-
 let cart = [];
 
 if (menuButton && navList) {
