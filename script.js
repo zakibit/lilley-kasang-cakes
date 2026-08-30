@@ -6,7 +6,6 @@ const productCards = document.querySelectorAll(".productCard");
 const searchBox = document.querySelector("#searchBox");
 const cartButtons = document.querySelectorAll(".addToCart");
 let cart = [];
-
 if (menuButton && navList) {
 
     menuButton.addEventListener("click", function(){
@@ -218,7 +217,7 @@ if (orders.length === 0) {
     increaseButton.addEventListener("click", function(){
     item.quantity++;
 });
-decreaseButton.addEventListener("click", function(){
+    decreaseButton.addEventListener("click", function(){
     item.quantity--;
 });
         orderList.appendChild(orderItem);
@@ -234,6 +233,58 @@ decreaseButton.addEventListener("click", function(){
 }
    calculateTotal();
 });
+    });
+
+}
+
+const loginForm = document.querySelector("#loginForm");
+const emailInput = document.querySelector("#email");
+const passwordInput = document.querySelector("#password");
+const errorMessage = document.querySelector("#loginError");
+const success = document.querySelector("#success")
+const users = [
+    {
+        name: "Nathaniel",
+        email: "Nathaniel@gmail.com",
+        password: "123456"
+    },
+    {
+        name: "Elisha",
+        email: "Elisha@gmail.com",
+        password: "asdfghjkl"
+    },
+    {
+        name: "Kasang",
+        email: "kasang@gmail.com",
+        password: "kasang123"
+    }
+];
+
+if (loginForm) {
+
+    loginForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+        errorMessage.textContent = "";
+        const email = emailInput.value.trim();
+        const password = passwordInput.value;
+
+        const user = users.find(function(user) {
+            return user.email.toLowerCase() === email.toLowerCase();
+        });
+
+        if (!user) {
+            errorMessage.textContent = "User not found.";
+            return;
+        }
+
+        if (user.password !== password) {
+            errorMessage.textContent = "Incorrect password.";
+            return;
+        }
+
+        success.textContent = `Welcome ${user.name}!`;
+
     });
 
 }
