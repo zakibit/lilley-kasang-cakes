@@ -11,7 +11,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LiLLey Kasang Cakes</title>
 </head>
-
 <body>
     <header>
         <nav class="navBar">
@@ -45,6 +44,9 @@
         
         </section>
         <div id="cartTotal" class="cartTotal"></div>
+        <div id="cartTotal"></div>
+    
+        <button id="sendWhatsAppBtn" class="whatsappBtn menuBtn">Place Your Order</button>
     </main>
     <footer class="footer">
         <div class="footerImage">
@@ -69,14 +71,29 @@
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="https://wa.me/2347081178816" target="_blank">
+                    <a href="https://wa.me/234763825521" target="_blank">
                         <i class="fa-brands fa-whatsapp"></i>
                     </a>
                 </div>
             </div>
-            <a href="https://wa.me/2347081178816" target="_blank" rel="noopener noreferrer" class="menuBtn">Place Your
-                Orders</a>
-        </div>
+            <!-- WhatsApp Order Button -->
+            <button id="sendWhatsAppBtn" class="whatsappBtn">Send Order via WhatsApp 💬</button>
+            
+            <!-- Order Summary Modal Popup -->
+            <div id="orderModal" class="modalOverlay hidden">
+                <div class="modalContent">
+                    <h2>Confirm Your Order</h2>
+                    <p class="modalSubtitle">Please review your items before proceeding:</p>
+            
+                    <div id="modalOrderItems" class="modalOrderList"></div>
+                    <div id="modalOrderTotal" class="modalOrderTotal"></div>
+            
+                    <div class="modalActions">
+                        <button id="closeModalBtn" class="secondaryBtn">Make Changes</button>
+                        <button id="confirmOrderBtn" class="whatsappBtn">Place Your Order</button>
+                    </div>
+                </div>
+            </div>
     </footer>
     <div class="copyright">
         <p>&copy; 2026 LiLLey Kasang Cakes. All Rights Reserved.</p>

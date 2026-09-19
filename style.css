@@ -6,6 +6,10 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color:#f5f5f5;
@@ -138,6 +142,7 @@ h2{
     margin-bottom: 1rem;
     line-height: 1.2;
     letter-spacing: 3px;
+    font-family:'Anton','Raleway', sans-serif;
 }
 
 .heroText{
@@ -1161,3 +1166,113 @@ input{
 .success{
     color:rgb(9, 207, 9)
 }
+
+/* modal overlay */
+
+/* Modal Overlay Background */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalOverlay.hidden {
+  display: none;
+}
+
+/* Modal Box */
+.modalContent {
+  background-color: var(--cardBg, #ffffff);
+  width: 90%;
+  max-width: 450px;
+  padding: 1.8rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+.modalContent h2 {
+  color: var(--textDark, #3e2723);
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.modalSubtitle {
+  color: var(--textMuted, #795548);
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+/* Modal Items List */
+.modalOrderList {
+  max-height: 200px;
+  overflow-y: auto;
+  border-top: 1px solid var(--borderColor, #ffe0b2);
+  border-bottom: 1px solid var(--borderColor, #ffe0b2);
+  padding: 0.8rem 0;
+  margin-bottom: 1rem;
+}
+
+.modalItem {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: var(--textDark, #3e2723);
+}
+
+.modalOrderTotal {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--primaryColor, #e65100);
+  text-align: right;
+  margin-bottom: 1.2rem;
+}
+
+/* Buttons in Modal */
+.modalActions {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.secondaryBtn {
+  flex: 1;
+  padding: 0.85rem;
+  background-color: #e0e0e0;
+  color: #333333;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.secondaryBtn:hover {
+  background-color: #cccccc;
+}
+
+.whatsappBtn {
+  flex: 1;
+  padding: 0.85rem;
+  background-color: #25d366;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.whatsappBtn:hover {
+  background-color: #128c7e;
+}
+
