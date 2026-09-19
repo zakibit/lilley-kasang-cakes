@@ -5,6 +5,7 @@ const categoryButtons = document.querySelectorAll(".category");
 const productCards = document.querySelectorAll(".productCard");
 const searchBox = document.querySelector("#searchBox");
 const cartButtons = document.querySelectorAll(".addToCart");
+const cartNotification = document.querySelector("#cartNotification");
 
 let cart = [];
 
@@ -162,6 +163,16 @@ cartButtons.forEach(function(button){
         } else {
 
             cart.push(product);
+            cartNotification.textContent =
+    `${productName} has been added to your cart.`;
+
+cartNotification.classList.add("show");
+
+setTimeout(function(){
+
+    cartNotification.classList.remove("show");
+
+}, 3000);
 
         }
 
@@ -329,39 +340,33 @@ if (orderList) {
         calculateTotal();
 
 
-        const removeButton =
-            orderItem.querySelector(".removeItem");
+       const removeButton =
+    orderItem.querySelector(".removeItem");
 
+removeButton.addEventListener("click", function(){
 
-        removeButton.addEventListener("click", function(){
+    const itemIndex = orders.indexOf(item);
 
-            const itemIndex =
-                orders.indexOf(item);
+    orders.splice(itemIndex, 1);
 
-            orders.splice(itemIndex, 1);
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(orders)
+    );
 
-            localStorage.setItem(
-                "cart",
-                JSON.stringify(orders)
-            );
+    orderItem.remove();
 
-            orderItem.remove();
+    calculateTotal();
 
+    if (orders.length === 0) {
 
-            if (orders.length === 0) {
+        orderList.innerHTML =
+            `<p class="emptyCart">Your cart is empty.</p>`;
 
-                orderList.innerHTML =
-                    `<p class="emptyCart">Your cart is empty.</p>`;
+    }
 
-            }
-
-            calculateTotal();
-
-        });
-
-    });
-
-}
+})
+})}
 
 
 const loginForm =
@@ -462,7 +467,7 @@ const closeModalBtn = document.querySelector("#closeModalBtn");
 const confirmOrderBtn = document.querySelector("#confirmOrderBtn");
 
 // Phone number (international format without + or spaces)
-const phoneNumber = "2347081178816"; // Replace with your actual phone number
+const phoneNumber = "2347063825521"; // Replace with your actual phone number
 
 // 1. Show modal when user clicks "Send Order via WhatsApp"
 if (sendWhatsAppBtn) {
