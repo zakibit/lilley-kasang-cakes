@@ -462,7 +462,7 @@ const closeModalBtn = document.querySelector("#closeModalBtn");
 const confirmOrderBtn = document.querySelector("#confirmOrderBtn");
 
 // Phone number (international format without + or spaces)
-const phoneNumber = "234763825521"; 
+const phoneNumber = "2347081178816"; // Replace with your actual phone number
 
 // 1. Show modal when user clicks "Send Order via WhatsApp"
 if (sendWhatsAppBtn) {
